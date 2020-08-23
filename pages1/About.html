@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        
+        }
+        html {
+            font-size: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+        a {
+            text-decoration: none;
+        }
+        .container {
+            min-height: 110vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #About{
+            background-image: url(../images1/glalibraries-banner.jpg);
+            background-size: cover;
+            background-position: top center;
+            position: relative;
+            z-index: 1;
+        }
+        #About::after{
+            content:'';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: .7;
+            z-index: -1;
+        }
+        p{
+            font-size: 30px;
+            color: whitesmoke;
+        }
+        #About h1{
+            display: block;
+            width: fit-content;
+            font-size: 4rem;
+            position: relative;
+            color: transparent;
+            animation: text_reveal 2s ease forwards;
+            
+        }
+        #About h1 span{
+            position:absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: skyblue;
+            animation: text_reveal_box 1s ease;
+            animation-delay: 1s;
+        
+        }
+        @keyframes text_reveal_box{
+            50% {
+                width: 100%;
+                left: 0;
+            }
+            100% {
+                width: 0;
+                left: 100%;
+            }
+        }
+        @keyframes text_reveal{
+            100%{
+                color: white;
+            }
+        }
+        #section-1{
+        margin-top: 5px;
+        margin-bottom: 30px;
+        width: 50%;
+        background-color: transparent;
+        height:550px;
+        color: white;
+        margin-right: auto; 
+        }
+        #section-1 h1{
+            padding-top: 2px;
+            padding-bottom: 10px;
+            font-size:40px ;
+            
+
+        }
+        #section-1 p{
+            padding-left: 2px;
+            padding-right: 15px;
+        }
+       
+    </style>
+</head>
+<body>
+    <section id="About">
+        <div class=" About container">
+            <div id="section-1">
+                <h1 style="color: teal">About Us<span></span></h1><br>
+                <p>
+                    The website aims to provide an interactive platform to interact with those students
+                     who have faced the company interview and
+                     can chat with the senior person according to their interest as one feels hesitation in
+                      a new atmosphere and as a output they are unable to interact with teachers or seniors
+                       about certain things. In addition, they will also get some more information which will
+                       help them to face interview with confidence and to overcome certain problems that are
+                        faced by a fresher as experience plays a major role in all field. 
+                        So, we named it “GLA CONNECTIFY” which suggests to connect GLA students and management together 
+                        on a single platform.
+                    </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
