@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        
+        }
+        html {
+            font-size: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+       
+        form{
+            font-size: 20px;
+        }
+        .button {
+            min-height: 110vh;
+            width: 100%;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            
+        }
+        #form1 {
+            background-image: url(../images1/p1.jpg);
+            background-size: cover;
+            background-position: top center;
+            position: relative;
+            z-index: 1
+        }
+        #form1::after{
+            content:'';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: .7;
+            z-index: -1;
+        }
+        #form1 p{
+            font-size: 40px;
+            color: whitesmoke;
+        }
+        .button a{
+            border: 2px solid black;
+            color: gray;
+            background-color: white;
+            padding: 8px 20px;
+            border-radius:8px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 200px;
+            margin-left: 600px;
+       }
+       .button a:hover
+       {
+           background-color: skyblue;
+           color: black;
+       }
+       p{
+            padding-top: 50px;
+            font-size: 30px;
+            color: whitesmoke;
+            text-align: center;
+        }
+        .upload-btn-wrapper{
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .btn{
+            border: 2px solid black;
+            color: gray;
+            background-color: white;
+            padding: 8px 20px;
+            border-radius:8px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 100px;
+            margin-left: 600px;
+        }
+        .btn:hover{
+            background-color: skyblue;
+            color: black;
+        }
+        .upload-btn-wrapper input[type=file]{
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="form1">
+        <p>Click on "upload a file" to upload ur project file:</p>
+        <div class="upload-btn-wrapper">
+            <button class="btn">Upload a file</button>
+            <form>
+               <input type="file" name="filename" id="file">
+            </form>
+        </div>
+        <div class="button">
+            <a href="../pages1/aftersubmit.html">Submit</a>
+        </div>
+    </div>
+</body>
+</html>
